@@ -1,14 +1,17 @@
+<!DOCTYPE html>
+<html>
+
 <meta charset="UTF-8">
-<h1> O Sistema Solar - Distâncias ao Sol </h1>
+<h1> O Sistema Solar </h1>
  <h3>Escreva o Planeta para saber <br> a distâncias ao Sol</h3>
-<h4>Escreva o Planeta igual à lista, respeitando acento e maiúscula (exceto asterisco)<br>***Para calcular outro planeta carregue a página***</h4> 
+<h4>**Escreva o Planeta igual à lista, respeitando acento e maiúscula (exceto asterisco)**<br>***Para calcular outro planeta carregue a página***</h4> 
 
 <input/>
 <button> Distância ao Sol</button>
 
 <br> <h2>Planetas do Sistema Solar</h2>
- <h3>Mercúrio</h3>
- <h3>Vênus</h3>
+ <h3>Mercúrio  </h3>
+ <h3>Vênus     </h3>
  <h3>Terra</h3>
  <h3>Marte</h3>
  <h3>*Ceres</h3>
@@ -22,104 +25,34 @@
 <script> 
 
 
-	function pulaLinha() {
+    function pulaLinha() {
 
-		documet.write("<br>");
+        documet.write("<br>");
 
 
-	}
+    }
 
-	function mostra (frase) {
+    function mostra (frase) {
 
-		document.write("<big>" + frase + "</big>")
-	}
-		var planetas = ["57.910.000 Km", "108.200.000 Km", "149.600.000 Km", "227.940.000 Km", "414.000.000 Km", "778.330.000 Km", "1.429.400.000 Km", "2.870.990.000 Km", "4.504.300.000 Km", "5.922.000.000 Km", "10.149.000.000 Km"]
-		
+        document.write("<big>" + frase + "</big>")
+    }
+        var distancias = ["57.910.000 Km", "108.200.000 Km", "149.600.000 Km", "227.940.000 Km", "414.000.000 Km", "778.330.000 Km", "1.429.400.000 Km", "2.870.990.000 Km", "4.504.300.000 Km", "5.922.000.000 Km", "10.149.000.000 Km"]
+        var planetas = ["Mercúrio", "Vênus" , "Terra" , "Marte" , "Ceres" , "Júpiter" , "Saturno" , "Urano" , "Netuno" , "Plutão" , "Éris"]
 
-		var planeta1 = "Mercúrio" 
-		var planeta2 = "Vênus" 
-		var planeta3 = "Terra" 
-		var planeta4 = "Marte" 
-		var planeta5 = "Ceres" 
-		var planeta6 = "Júpiter" 
-		var planeta7 = "Saturno" 
-		var planeta8 = "Urano" 
-		var planeta9 = "Netuno" 
-		var planeta10 = "Plutão" 
-		var planeta11 = "Éris" 
- 
-		var input = document.querySelector("input");
+        var input = document.querySelector("input");
         input.focus();
 
     function calcula () {
 
-    	if(input.value == planeta1) {
-
-    	mostra("A distância média de Mercúrio ao Sol é " + planetas[0]  )
-    }
-
-    	if (input.value == planeta2) {
-
-    	mostra("A distância média de Vênus ao Sol é " + planetas[1] )
-    }
-
-    	if(input.value == planeta3) {
-
-    	mostra("A distância média da Terra ao Sol é " + planetas[2]  )
-    }
-
-    	if(input.value == planeta4) {
-
-    	mostra("A distância média de Marte ao Sol é " + planetas[3]  )
-    }
-
-    	if(input.value == planeta5) {
-
-    	mostra("A distância média de Ceres ao Sol é " + planetas[4] )
-    }
-
-    	if(input.value == planeta6) {
-
-    	mostra("A distância média de Júpiter ao Sol é " + planetas[5] )
-    }
-    	
-    	if(input.value == planeta7) {
-
-    	mostra("A distância média de Saturno ao Sol é " + planetas[6] )
-    }
-
-    	if(input.value == planeta8) {
-
-    	mostra("A distância média de Urano ao Sol é " + planetas[7]  )
-    }
-
-    	if(input.value == planeta9) {
-
-    	mostra("A distância média de Netuno ao Sol é " + planetas[8] )
-    }
-
-    	if(input.value == planeta10) {
-
-    	mostra("A distância média de Plutão ao Sol é " + planetas[9]  )
-    }
-
-    	if(input.value == planeta11) {
-
-    	mostra("A distância média de Éris ao Sol é " + planetas[10] )
-    }
-
-
+        for ( var i = 0; i < planetas.length ; i++ ){
+            if(input.value == planetas[i]) {
+                mostra("A distância média de " + input.value + " ao Sol é " + distancias[i]  )
+            }
+        }
     }
 
     var button = document.querySelector("button")
     button.onclick = calcula
-    
 
-
-
-
-
-
-
-	</script>
-
+    </script>
+</html>
